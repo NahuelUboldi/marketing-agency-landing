@@ -1,0 +1,31 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu {
+  // @include gradient;
+  background-color: $primary;
+  li {
+    padding: 0 0.7rem;
+
+    a {
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    a:hover {
+      @include text-hot-gradient;
+    }
+  }
+  .navbar-brand {
+    .logo {
+      span {
+        @include text-hot-gradient;
+        font-weight: bolder;
+        text-transform: capitalize;
+        font-size: 2rem;
+        letter-spacing: 0px;
+        // -webkit-text-stroke: 1px $white;
+        // text-stroke: 1px $white;
+      }
+    }
+  }
+}
